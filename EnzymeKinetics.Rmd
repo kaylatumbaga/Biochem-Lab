@@ -71,13 +71,15 @@ for the purposes of this template document.
 ### Part A: Measure Enzyme Concentration
 ### Since we do this part each week, we can store the absorbances
 ### as a length two vector, and do the calculations all at once.
-EnzymeAbsorbance <- set_units(c(,))
+bradford <- read.table("bradford.dat", header=TRUE)
+calibration <- lm(Concentration~Absorbance, data=bradford)
 ### Calculate molar enzyme concentration using the absorbance,
 ### the extinction coefficient for the enzyme, and the molecular
 ### weight of the enzyme. This is a good exercise for unit conversions.
-EnzymeE <- set_units(,L/g)
+### EnzymeE <- set_units(,L/g)
 EnzymeFW <- set_units(,g/mol)
-EnzymeStock <- ;
+EnzymeStock <- set_units(c(0.1,predict(calibration, newdata=list(Absorbance=0.400))*4),mg/mL)
+EnzymeStockM <- ;
 
 ### Part B: Measure Optimal Enzyme Amount
 ### When you determine the volume of enzyme needed for each reaction for
