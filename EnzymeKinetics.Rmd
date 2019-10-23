@@ -153,11 +153,13 @@ LdopaSC <- ;
 DdopaSC <- ;
 ```
 
-|Substrate|k~cat~ (`{r deparse_unit(Ldopakcat)}`)|K~M~ (`{r deparse_unit(LdopaKm)}`)|k~cat~/K~M~ (`{r deparse_unit(LdopaSC)}`)|
+|Substrate|k~cat~ (`r deparse_unit(Ldopakcat)`)|K~M~ (`r deparse_unit(LdopaKm)`)|k~cat~/K~M~ (`r deparse_unit(LdopaSC)`)|
 |------|--------|---------|-----------|
-|L-Dopa|`{r drop_units(Ldopakcat)}`|`{r drop_units(LdopaKm)}`|`{r drop_units(LdopaSC)}`|
-|D-Dopa|`{r drop_units(Ddopakcat)}`|`{r drop_units(DdopaKm)}`|`{r drop_units(DdopaSC)}`|
+|L-Dopa|`r drop_units(Ldopakcat)`|`r drop_units(LdopaKm)`|`r drop_units(LdopaSC)`|
+|D-Dopa|`r drop_units(Ddopakcat)`|`r drop_units(DdopaKm)`|`r drop_units(DdopaSC)`|
+
 Table: Put a more descriptive caption for this table here.
+
 It will make the most sense to plot both curves on one plot, to make comparison
 easier. This plot will require a detailed caption, which can be written below.
 
